@@ -1,24 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useState } from "react";
 
 function App() {
+  const handleClick = () => {
+    return alert("+1 !");
+  };
+  const [counter, setCounter] = useState(0);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <>
+      <div className="app">
+        <div className="counter-primary">
+          <div
+            style={{ visibility: counter <= 0 ? "hidden" : "visible" }}
+            className="left-btn"
+            onClick={(handleClick) => {
+              setCounter(counter - 1);
+            }}
+          >
+            -
+          </div>
+          <div className="main-btn">
+            <div className="main-counter">{counter}</div>
+          </div>
+          <div
+            style={{ visibility: counter >= 10 ? "hidden" : "visible" }}
+            className="left-btn"
+            onClick={(handleClick) => {
+              setCounter(counter + 1);
+            }}
+          >
+            +
+          </div>
+        </div>
+        <div
+          className="reset-Btn"
+          onClick={(handleClick) => {
+            setCounter(0);
+          }}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          Reset
+        </div>
+      </div>
+    </>
   );
 }
 
