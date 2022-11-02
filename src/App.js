@@ -28,7 +28,7 @@ function App() {
             </div>
             <div
               style={{ visibility: counter >= 10 ? "hidden" : "visible" }}
-              className="left-btn"
+              className="right-btn"
               onClick={(handleClick) => {
                 setCounter(counter + 1);
               }}

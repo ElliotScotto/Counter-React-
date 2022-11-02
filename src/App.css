@@ -29,7 +29,6 @@ header {
   background-color: #5c48d3;
   display: flex;
   justify-content: center;
-  border: red solid 1px;
   width: 100px;
   height: 100px;
   border-radius: 15px;
@@ -43,22 +42,21 @@ header {
 }
 /* Bouton gauche PLUS */
 .left-btn {
-  border: green solid 1px;
   width: 50px;
   height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 22px;
+  font-size: 68px;
 }
 /* Bouton droite MOINS */
 .right-btn {
-  border: green solid 1px;
   width: 50px;
   height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 68px;
 }
 /* Block du bas */
 
